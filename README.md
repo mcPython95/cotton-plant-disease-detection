@@ -1,15 +1,16 @@
-# Cotton Plant Disease Detection Using ResNet152 
+# Cotton Plant Disease Detection Using ResNet152
 
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Dataset](#dataset)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Dataset](#dataset)
 - [Model Architecture and Optimization](#model-architecture-and-optimization)
 - [Model Training and Evaluation](#model-training-and-evaluation)
 - [Results](#results)
+- [Saving the Model](#saving-the-model)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
@@ -17,6 +18,12 @@
 ## Introduction
 
 This project focuses on detecting diseases in cotton plants using machine learning techniques. Early detection of diseases in cotton plants can help farmers take preventive measures and ensure better crop yields. The project uses a Convolutional Neural Network (CNN) based on ResNet152 architecture for image classification.
+
+## Dataset
+
+The dataset used for this project consists of images of cotton plants with different diseases. It includes labels for various diseases such as leaf blight, bacterial blight, and healthy plants.
+
+You can download the dataset from [this link](https://www.kaggle.com/datasets/janmejaybhoi/cotton-disease-dataset).
 
 ## Dependencies
 
@@ -27,7 +34,6 @@ The project requires the following Python libraries:
 - matplotlib
 - seaborn
 - scikit-learn
-- tensorflow (or keras)
 - OpenCV
 - torch
 - torchvision
@@ -56,20 +62,18 @@ To get started with this project, follow these steps:
 
    [Open in Colab](https://colab.research.google.com/github/mcPython95/cotton-plant-disease-detection/blob/main/cotton_plant_disease_detection.ipynb)
 
-2. Follow the steps in the notebook to preprocess the data, train the model, and evaluate its performance.
+2. Set the data directory in the notebook:
+   ```python
+   DataDir = '/content/drive/MyDrive/cotton plant disease detection/dataset/Cotton Disease/'
+   ```
 
-## Dataset
-
-The dataset used for this project consists of images of cotton plants with different diseases. It includes labels for various diseases such as leaf blight, bacterial blight, and healthy plants.
-
-You can download the dataset from [this link]([https://www.kaggle.com/datasets](https://www.kaggle.com/datasets/janmejaybhoi/cotton-disease-dataset)).
+3. Follow the steps in the notebook to preprocess the data, train the model, and evaluate its performance.
 
 ## Model Architecture and Optimization
 
 ### ResNet152 Architecture
 
-- **ResNet152**: This architecture is a deep convolutional neural network (CNN) with 152 layers. It is known for its performance in image classification tasks due to its ability to handle the vanishing gradient problem through the use of residual blocks.
-- **Modifications**: The final fully connected layer was modified to adapt to the specific number of classes in this project, followed by ReLU activation and dropout for regularization.
+- **ResNet152**: ResNet, short for Residual Network, is a type of deep neural network that uses residual learning to ease the training of networks that are substantially deeper than those used previously. ResNet152 is a variant with 152 layers, known for its ability to handle the vanishing gradient problem through the use of skip connections or shortcuts, allowing gradients to pass through layers directly, bypassing certain blocks. This architecture improves the training of very deep networks and has proven to be highly effective in image recognition tasks.
 
 ### Optimization Techniques
 
@@ -102,6 +106,14 @@ The model performed exceptionally well in detecting diseases in cotton plants. I
 - **ROC-AUC**: 97.83%
 - **Error Rate**: 3.16%
 
+## Saving the Model
+
+After training, the model can be saved to your Google Drive for future use:
+
+```python
+torch.save(model, '/content/drive/MyDrive/cotton plant disease detection/cotton_plant_dis_det_model.pt')
+```
+
 ## Contributing
 
 We welcome contributions to improve this project. To contribute:
@@ -113,3 +125,15 @@ We welcome contributions to improve this project. To contribute:
 5. Push to the branch (`git push origin feature-branch`).
 6. Create a new Pull Request.
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Author's Name](https://github.com/mcPython95) - Project creator and maintainer.
+- Thanks to all the contributors who helped in improving this project.
+
+---
+
+Feel free to customize this README file based on your specific project details and requirements. If you have any additional content or sections to add, let me know!
