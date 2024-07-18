@@ -1,6 +1,3 @@
-
----
-
 # Cotton Plant Disease Detection Using ResNet152 
 
 ## Table of Contents
@@ -65,7 +62,7 @@ To get started with this project, follow these steps:
 
 The dataset used for this project consists of images of cotton plants with different diseases. It includes labels for various diseases such as leaf blight, bacterial blight, and healthy plants.
 
-You can download the dataset from [this link](https://www.kaggle.com/datasets).
+You can download the dataset from [this link]([https://www.kaggle.com/datasets](https://www.kaggle.com/datasets/janmejaybhoi/cotton-disease-dataset)).
 
 ## Model Architecture and Optimization
 
@@ -116,15 +113,3 @@ We welcome contributions to improve this project. To contribute:
 5. Push to the branch (`git push origin feature-branch`).
 6. Create a new Pull Request.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- [Author's Name](https://github.com/mcPython95) - Project creator and maintainer.
-- Thanks to all the contributors who helped in improving this project.
-
----
-
-Feel free to customize this README file based on your specific project details and requirements. If you have any additional content or sections to add, let me know!
