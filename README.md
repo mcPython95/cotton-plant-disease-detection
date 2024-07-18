@@ -1,4 +1,5 @@
-# Cotton Plant Disease Detection Using ResNet152
+# Enhanced Cotton Plant Disease Detection Using ResNet152: Leveraging Deep Residual Learning
+
 
 ## Table of Contents
 
