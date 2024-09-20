@@ -214,7 +214,7 @@ def predict(image):
     top_prob, top_idx = torch.max(probabilities, 0)
     probability = top_prob
     index = top_idx
-    if probability >= 0.99:
+    if probability >= 0.90:
         if index in [0,1]:
                 return  f'<div style="background-color: rgb(244,67,54,0.8); font-weight: bold;color: black; padding: 20px;border-radius : 0.5rem;text-align : center">Prediction  :  {class_names[index].capitalize()} ({probability * 100:.2f}%)</div>'
         else:
